@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  color: $color;
+  font-family: $base-font;
+}
+
+// sticky header
+.site-container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  width: 80%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+// header
+.global-header {
+  width: 100%;
+  display: table;
+  border-bottom: 1px solid #ddd;
+  .site-nav {
+    float: left;
+  }
+  .user-nav {
+    float: right;
+    .user-name {
+      padding: 19px 24px;
+      display: inline-block;
+      color: $anchor-color;
+    }
+  }
+  li {
+    display: inline-block;
+    a {
+      display: block;
+      font-size: 14px;
+      padding: 20px 24px;
+      color: $anchor-color;
+      text-transform: uppercase;
+      &:hover {
+        color: #fff;
+        background: $anchor-color;
+      }
+    }
+  }
+}
+
+// footer
+.global-footer {
+  padding: 20px;
+  text-align: center;
+  li {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    a {
+      color: $anchor-color;
+    }
+  }
+}
+
+form {
+  border: 1px solid #ddd;
+  padding: 20px;
+  width: 50%;
+  border-radius: 3px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.1);
+  margin: 0 auto;
+  .form-group {
+    &.has-error {
+      input[type='email'],
+      input[type='password'] {
+        border: 1px solid #ff0000;
+      }
+    }
+  }
+  h2 {
+    font-weight: normal;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+  }
+  input[type='email'],
+  input[type='password'] {
+    display: block;
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: $base-font;
+    margin-bottom: 15px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    outline: none;
+  }
+  button {
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 3px;
+    cursor: pointer;
+    background: $anchor-color;
+    &:disabled {
+      background: #ddd;
+    }
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
