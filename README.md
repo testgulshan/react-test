@@ -1,1 +1,1 @@
-# ES6 React boilerplate using Webpack
+# ES6 React 16 using Webpack 3
